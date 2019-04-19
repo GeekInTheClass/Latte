@@ -26,8 +26,8 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if let birthday = birthday {
             //self.title = birthday.Year
-            MessageDetail.text = "\(birthday.Month) 월"
-            EmoticonDetail.text = "\(birthday.Day) 일"
+            MessageDetail.text = "\(birthday.Name)"
+            EmoticonDetail.text = "\(birthday.Year)년 \(birthday.Month)월 \(birthday.Day)일"
         }
     }
 

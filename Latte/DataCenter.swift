@@ -15,17 +15,20 @@ var Albums:[Album] = []
 var Messages:[Message] = []
 
  struct Date{
+    var Name: String
     var Year: Int
     var Month: Int
     var Day: Int
  
     init(){
+        self.Name = "None"
         self.Year = 0
         self.Month = 0
         self.Day = 0
     }
  
-    init(Year: Int, Month: Int, Day: Int){
+    init(Name: String, Year: Int, Month: Int, Day: Int){
+        self.Name = Name
         self.Year = Year
         self.Month = Month
         self.Day = Day
@@ -129,21 +132,21 @@ var Messages:[Message] = []
     }
  }
 
-var Birthday = Date(Year: 1997, Month: 3, Day: 29)
-var NewAlbum = Album(Title: "with you", Number: 0, UploadDay: Date.init(Year: 2019,Month: 03,Day: 28))
-let NewMessage = Message(Content: "Good Morning", SendDay: Date.init(Year: 2019, Month: 03, Day: 28), SendTime: Time.init(Hour: 18, Minute: 25))
+var Birthday = Date(Name: "Birthday", Year: 1997, Month: 3, Day: 29)
+var NewAlbum = Album(Title: "with you", Number: 0, UploadDay: Date.init(Name: "UploadDay", Year: 2019,Month: 03,Day: 28))
+let NewMessage = Message(Content: "Good Morning", SendDay: Date.init(Name: "SendDay", Year: 2019, Month: 03, Day: 28), SendTime: Time.init(Hour: 18, Minute: 25))
 
 func createBirthday(){
-    let MyDay = Date(Year: 1997, Month: 3, Day: 29)
-    let YourDay = Date(Year: 1998, Month: 12, Day: 21)
-    let Christmas = Date(Year: 2019, Month: 12, Day: 25)
-    let Valentines = Date(Year: 2019, Month: 2, Day: 14)
-    let NewYearsEve = Date(Year: 2019, Month: 12, Day: 31)
-    let NewYearsDay = Date(Year: 2020, Month: 1, Day: 1)
-    let ThanksGivingDay = Date(Year: 2019, Month: 9, Day: 13)
-    let SummerVacation = Date(Year: 2019, Month: 6, Day: 21)
-    let WinterVacation = Date(Year: 2019, Month: 12, Day: 20)
-    let Anniversary = Date(Year: 2020, Month: 3, Day: 15)
+    let MyDay = Date(Name: "MyDay", Year: 1997, Month: 3, Day: 29)
+    let YourDay = Date(Name: "YourDay", Year: 1998, Month: 12, Day: 21)
+    let Christmas = Date(Name: "Christmas", Year: 2019, Month: 12, Day: 25)
+    let Valentines = Date(Name: "Valentines", Year: 2019, Month: 2, Day: 14)
+    let NewYearsEve = Date(Name: "NewYearsEve", Year: 2019, Month: 12, Day: 31)
+    let NewYearsDay = Date(Name: "NewYearsDay", Year: 2020, Month: 1, Day: 1)
+    let ThanksGivingDay = Date(Name: "ThanksGivingDay", Year: 2019, Month: 9, Day: 13)
+    let SummerVacation = Date(Name: "SummerVacation", Year: 2019, Month: 6, Day: 21)
+    let WinterVacation = Date(Name: "WinterVacation", Year: 2019, Month: 12, Day: 20)
+    let Anniversary = Date(Name: "Anniversary", Year: 2020, Month: 3, Day: 15)
 
     Birthdays.append(MyDay)
     Birthdays.append(YourDay)
