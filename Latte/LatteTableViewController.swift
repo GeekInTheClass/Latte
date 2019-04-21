@@ -90,14 +90,30 @@ class LatteTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if "DETAIL_SUGUE" == segue.identifier,
+            let detailVC = segue.destination as? DetailViewController,
+            let cell = sender as? UITableViewCell {
+                let indexPath = tableView.indexPath(for:cell)!
+                let Birthday = Birthdays[indexPath.row]
+                
+                detailVC.birthday = Birthday
+            }
     }
-    */
-
+        
+        
+        
 }
+        /*if segue.identifier == "MessageSegue" {
+            if let destination = segue.destinationViewController as?
+                DetailViewController , let selectedIndex = self.tableView.indexPathForSelectedRow?.row
+                    destination.birthdays = DataCenter.Birthdays[selectedIndex] as Birthdays
+            
+        }*/
+
